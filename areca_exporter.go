@@ -287,6 +287,7 @@ func recordMetrics() {
 					Help:        "Constant metric with value 1 labeled with info about all physical disks attached to the Areca controller.",
 					ConstLabels: prometheus.Labels(m),
 				})
+				disk.Set(1)
 				diskGauges = append(diskGauges, disk)
 			}
 
